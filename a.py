@@ -92,7 +92,7 @@ def record_audio(label):
 
 def analyze_audio(data, rate):
 
-    samples = np.frombuffer(data, dtype=np.int16)
+    samples = np.frombuffer(data, dtype=np.int16) #This line converts raw binary data into numbers that Python/NumPy can work with.
 
     return {
 
@@ -110,7 +110,7 @@ def analyze_audio(data, rate):
 
 def transcribe(data, rate, width):
 
-    recognizer = sr.Recognizer()
+    recognizer = sr.Recognizer() #It creates a speech recognizer object that listens to audio and converts it into text.
 
     try:
 
@@ -226,7 +226,7 @@ def plot_both(stats1, stats2, rate):
 
 
 
-    plt.tight_layout()
+    plt.tight_layout() #tight_layout() is a Matplotlib helper that automatically fixes spacing between plots so things don’t overlap.
 
     plt.show()
 
